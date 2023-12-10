@@ -21,7 +21,7 @@ function setTitle(count: number) {
 function initialize() {
   winboxRef.value?.initialize()
 }
-
+    
 function openUrl() {
   const randomId = Math.floor(Math.random() * 20) + 1
   createWinBox({
@@ -67,41 +67,73 @@ const visible = ref(false)
     <div v-show="visible" class="button" @click="() => visible = false">
       Parent Dom Hidden
     </div>
+    <div>
+      Hello
+    </div>
   </div>
 </template>
 
 <style>
+
+/* 
+@font-family: {
+  font-family: 'MS Sans Serif';
+} */
+
 * {
   margin: 0;
   padding: 0;
+  @font-face: 'MS Sans Serif';
+  src: url('../public/font/converted/ms_sans_serif.woff');
 }
 
 html, body {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Open Sans", OpenSans, Roboto, Segoe UI, sans-serif;
-  background: linear-gradient(135deg, #000000, #282a2d);
+  background: #000;
   background-image: 'bg-test.png';
 }
 
-/* Controls  */
+/*  */
+/*  */
 .winbox.my-theme{
-    background: #fff;
+  color: #000;
 }
 .winbox.my-theme .wb-title {
-    color: #000;
+  background: gray;
+}
+.winbox.my-theme .wb-title {
+    color: silver;
 }
 
 .winbox.my-theme .wb-body {
-    color: #fff;
-    background: #131820;
+    background: #4d535a;
 }
 
 .winbox.my-theme .wb-control {
-  background-color: blue;
+  background-color:  gray;  
 }
 
 .winbox.my-theme .wb-header {
-  font-family: Pixelated MS Sans Serif;
+  @font-face: 'MS Sans Serif';
+  src: url('../public/font/converted/ms_sans_serif.woff');
+  
+}
+
+.winbox.my-theme .wb-full {
+  display: none;
+}
+
+.wb-min {
+  background-image: url('../public/icon/minimize.svg');
+  
+}
+.wb-max {
+  background-image: url('../public/icon/maximize.svg');
+
+}
+.wb-close {
+  background-image: url('../public/icon/close.svg');
 }
 
 /*  */
@@ -112,6 +144,7 @@ html, body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 }
 
 .button {

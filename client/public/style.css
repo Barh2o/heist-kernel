@@ -72,23 +72,24 @@
 
   /* Tabs */
   --border-tab: inset -1px 0 var(--window-frame),
-    inset 1px 1px var(--button-face),
-    inset -2px 0 var(--button-shadow),
-    inset 2px 2px var(--button-highlight)
+    inset 1px 1px var(--button-face), inset -2px 0 var(--button-shadow),
+    inset 2px 2px var(--button-highlight);
 }
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
-  src: url("fonts/converted/ms_sans_serif.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif.woff2") format("woff2");
+  src: url("/client/public/font/converted/ms_sans_serif.woff") format("woff");
+  src: url("/client/public/font/converted/ms_sans_serif.woff") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
-  src: url("fonts/converted/ms_sans_serif_bold.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif_bold.woff2") format("woff2");
+  src: url("/client/public/font/converted/ms_sans_serif_bold.woff")
+    format("woff");
+  src: url("/client/public/font/converted/ms_sans_serif_bold.woff")
+    format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -109,7 +110,7 @@ table,
 ul.tree-view,
 .window,
 .title-bar,
-li[role=tab] {
+li[role="tab"] {
   font-family: "Pixelated MS Sans Serif", Arial;
   -webkit-font-smoothing: none;
   font-size: 11px;
@@ -475,13 +476,23 @@ input[type="number"] {
   height: 22px;
 }
 /* clears the ‘X’ from Internet Explorer */
-input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 /* clears the ‘X’ from Chrome */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
 
 input[type="text"],
 input[type="password"],
@@ -819,12 +830,12 @@ summary:focus {
   background-image: svg-load("./icon/button-right.svg");
 }
 
-.window[role=tabpanel] {
+.window[role="tabpanel"] {
   position: relative;
   z-index: 2;
 }
 
-menu[role=tablist] {
+menu[role="tablist"] {
   position: relative;
   margin: 0 0 -2px 0;
   text-indent: 0;
@@ -833,14 +844,14 @@ menu[role=tablist] {
   padding-left: 3px;
 }
 
-menu[role=tablist] > li {
+menu[role="tablist"] > li {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   box-shadow: var(--border-tab);
   z-index: 1;
 }
 
-menu[role=tablist] > li[aria-selected=true] {
+menu[role="tablist"] > li[aria-selected="true"] {
   padding-bottom: 2px;
   margin-top: -2px;
   background-color: var(--surface);
@@ -849,20 +860,20 @@ menu[role=tablist] > li[aria-selected=true] {
   margin-left: -3px;
 }
 
-menu[role=tablist] > li > a {
+menu[role="tablist"] > li > a {
   display: block;
   color: #222;
   margin: 6px;
   text-decoration: none;
 }
-menu[role=tablist] > li[aria-selected=true] > a:focus {
+menu[role="tablist"] > li[aria-selected="true"] > a:focus {
   outline: none;
 }
-menu[role=tablist] > li > a:focus {
+menu[role="tablist"] > li > a:focus {
   outline: 1px dotted #222;
 }
 
-menu[role=tablist].multirows > li {
+menu[role="tablist"].multirows > li {
   flex-grow: 1;
   text-align: center;
 }
@@ -908,8 +919,8 @@ table > tbody > tr > * {
 }
 
 .progress-indicator {
-	height: 32px;
-	position: relative;
+  height: 32px;
+  position: relative;
   box-shadow: var(--border-sunken-inner);
   padding: 4px 4px;
   border: none;
@@ -919,7 +930,6 @@ table > tbody > tr > * {
   appearance: none;
   border-radius: 0;
 }
-
 
 .progress-indicator > .progress-indicator-bar {
   height: 100%;
