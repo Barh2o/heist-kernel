@@ -4,8 +4,8 @@ import { VueWinBox, useWinBox } from 'vue-winbox'
 import Counter from './Counter.vue'
 
 const options = {
-  title: 'Count: 0',
-  class: 'modern',
+  title: 'Work',
+  class: 'my-theme',
   x: 'center',
   y: 'center',
   width: '50%',
@@ -19,19 +19,6 @@ function setTitle(count: number) {
   winboxRef.value?.winbox?.setTitle(`Count: ${count}`)
 }
 
-// TODO: Check winbox status before resizing
-// const handleResize = () => {
-//   winboxRef.value?.winbox?.resize("50%", "50%").move("center", "center")
-// }
-
-// onMounted(() => {
-//   window.addEventListener('resize', handleResize)
-// })
-
-// onUnmounted(() => {
-//   window.removeEventListener('resize', handleResize)
-// })
-
 function initialize() {
   winboxRef.value?.initialize()
 }
@@ -41,7 +28,7 @@ function openUrl() {
   createWinBox({
     title: `Fox #${randomId}`,
     url: `https://randomfox.ca/images/${randomId}.jpg`,
-    class: 'modern',
+    class: 'my-theme',
   })
 }
 const visible = ref(false)
@@ -62,7 +49,7 @@ const visible = ref(false)
       :options="{
         title: `Fox #1`,
         url: `https://randomfox.ca/images/1.jpg`,
-        class: 'modern',
+        class: 'my-theme',
       }" open-on-mount @close="visible = false"
     />
   </div>
@@ -71,14 +58,14 @@ const visible = ref(false)
     <div v-show="!isOpen" class="button" @click="initialize">
       Open Vue component
     </div>
-    <div class="button" style="margin-top: 10px;" @click="openUrl">
+    <div class="button" @click="openUrl">
       Open Random URL
     </div>
 
-    <div v-show="!visible" class="button" style="margin-top: 10px;" @click="() => visible = true">
+    <div v-show="!visible" class="button" @click="() => visible = true">
       Parent Dom Visible
     </div>
-    <div v-show="visible" class="button" style="margin-top: 10px;" @click="() => visible = false">
+    <div v-show="visible" class="button" @click="() => visible = false">
       Parent Dom Hidden
     </div>
   </div>
@@ -93,8 +80,31 @@ const visible = ref(false)
 html, body {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Open Sans", OpenSans, Roboto, Segoe UI, sans-serif;
-  background: linear-gradient(135deg, #0d1117, #131820);
+  background: linear-gradient(135deg, #000000, #282a2d);
 }
+
+/* Controls  */
+.winbox.my-theme{
+    background: #fff;
+}
+.winbox.my-theme .wb-body {
+    color: #fff;
+    background: #131820;
+}
+.winbox.my-theme .wb-title {
+    color: #000;
+}
+.winbox.my-theme .wb-control {
+  background-color: blue;
+}
+.winbox.my-theme .wb-full {
+  background-color: red;
+  display: none;
+}
+.winbox.my-theme .wb-header {
+  font-family: Pixelated MS Sans Serif;
+}
+/*  */
 
 .container {
   display: flex;
@@ -105,13 +115,12 @@ html, body {
 }
 
 .button {
+  display: flex;
+  border: solid 1px red;
   padding: 5px 10px;
   margin-bottom: 5px;
-  display: inline-block;
-  background-color: #ca00b4;
   color: #fff;
   width: auto;
-  border-radius: 10px;
   padding: 15px 25px;
   cursor: pointer;
 }
