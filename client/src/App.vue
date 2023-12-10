@@ -4,10 +4,9 @@ import { VueWinBox, useWinBox } from 'vue-winbox'
 import Counter from './Counter.vue'
 
 const options = {
-  title: 'Work',
   class: 'my-theme',
-  x: 'center',
-  y: 'center',
+  x: '0',
+  y: '0',
   width: '50%',
   height: '50%',
 }
@@ -81,29 +80,30 @@ html, body {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Open Sans", OpenSans, Roboto, Segoe UI, sans-serif;
   background: linear-gradient(135deg, #000000, #282a2d);
+  background-image: 'bg-test.png';
 }
 
 /* Controls  */
 .winbox.my-theme{
     background: #fff;
 }
+.winbox.my-theme .wb-title {
+    color: #000;
+}
+
 .winbox.my-theme .wb-body {
     color: #fff;
     background: #131820;
 }
-.winbox.my-theme .wb-title {
-    color: #000;
-}
+
 .winbox.my-theme .wb-control {
   background-color: blue;
 }
-.winbox.my-theme .wb-full {
-  background-color: red;
-  display: none;
-}
+
 .winbox.my-theme .wb-header {
   font-family: Pixelated MS Sans Serif;
 }
+
 /*  */
 
 .container {
