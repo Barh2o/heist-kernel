@@ -1,0 +1,58 @@
+/*  */
+/*  */
+.winbox.my-theme{
+    color: #000;
+  }
+  
+  .winbox.my-theme .wb-body {
+      background: #4d535a;
+  }
+  
+  .winbox.my-theme .wb-control {
+    border: solid 2px darkblue;  
+  }
+  
+  .winbox.my-theme .wb-header {
+    @font-face: 'MS Sans Serif';
+    src: url('../public/font/converted/ms_sans_serif.woff');
+    
+  }
+  
+  .winbox.my-theme .wb-full {
+    display: none;
+  }
+  
+  .wb-min {
+    background-image: url('../public/icon/minimize.svg');
+    
+  }
+  .wb-max {
+    background-image: url('../public/icon/maximize.svg');
+    border-left: solid 2px darkblue;  
+    border-right: solid 2px darkblue;  
+  
+  }
+  .wb-close {
+    background-image: url('../public/icon/close.svg');
+  }
+  
+  /*  */
+  
+  .container {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .button {
+    display: flex;
+    border: solid 1px red;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    color: #fff;
+    width: auto;
+    padding: 15px 25px;
+    cursor: pointer;
+  }
