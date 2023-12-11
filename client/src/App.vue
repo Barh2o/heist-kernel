@@ -141,7 +141,7 @@ html, body {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ;
   justify-content: center;
   height: 100vh;
   width: 100%;
