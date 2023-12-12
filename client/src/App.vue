@@ -1,62 +1,69 @@
 <template>
-  <VueWinBox ref="winboxRef" :options="options" @focus="isOpen = true" @close="isOpen = false">
-  </VueWinBox>
-
   <div class="container">
-    <div id="desktop">
-      <div class="link-icon" id="home">
-        <img src="../public/assets/icon/home__network.png">
-        Home
+    <div class="desktop">
+      <div class="links-section">
+
+        <div class="links-top">
+          <div class="link-icon">
+            <a target="self" href="_blank">
+              <img class="img__link" src="..\public\assets\icon\network_internet_pcs_installer-2.png" alt="">
+              <p>Home</p>
+            </a>
+          </div>
+          <div class="link-icon">
+            <a onclick="toggleImage('image1')">
+              <img class="img__link" src="../public/assets/icon/contact__msagent.png" alt="">
+              <p>Contact</p>
+            </a>
+          </div>
+          <div class="link-icon">
+            <a href="_blank">
+              <img class="img__link" style="width: 40px;px;" src="../public/assets/icon/utilities-terminal.png" alt="">
+              <p>Organization</p>
+            </a>
+          </div>
+          <div class="link-icon">
+            <a href="_blank">
+              <img class="img__link archive-ico" src="../public/assets/icon/briefcase.png" alt="">
+              <p>Archive</p>
+            </a>
+          </div>
+          <p></p>
+        </div>
+
+        <div class="links-bottom">
+          <div class="link-icon">
+            <a target="_blank" href="https://www.twitter.com/heistht">
+              <img class="img__link" src="../public/assets/icon/twitter.png" alt="">
+              <p>Twitter</p>
+            </a>
+          </div>
+          <div class="link-icon">
+            <a target="_blank" href="https://www.instagram.com/heist">
+              <img class="img__link" src="../public/assets/icon/instagram.png" alt="">
+              <p>Instagram</p>
+            </a>
+          </div>
+          <div class="link-icon">
+            <a target="_blank" href="https://www.heist.net/">
+              <img class="img__link cart-img" src="../public/assets/icon/shop.png" alt="">
+              <p>Shop</p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="link-icon" id="contact">
-        <img src="../public/assets/icon/contact__msagent.png"/>
-        Contact
+
+      <div class="img-section">
+        <img class="img__interface" src="../public/assets/img/heist.png" />
       </div>
-      <div class="link-icon" id="shop">
-        <img src="../public/assets/icon/home__network.png">
-        Shop
-      </div>
-      <div class="link-icon" id="organization">
-        <img src="../public/assets/icon/home__network.png">
-        Organization
-      </div>
-      <div class="link-icon" id="twitter">
-        <img src="../public/assets/icon/home__network.png">
-        Twitter
-      </div>
-      <div class="link-icon" id="instagram">
-        Instagram
-      </div>
+
     </div>
 
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { VueWinBox, useWinBox } from 'vue-winbox'
-import Counter from './Counter.vue'
-
-const options = {
-  class: 'my-theme',
-  x: '0',
-  y: '0',
-  width: '50%',
-  height: '50%',
-}
-const winboxRef = ref()
-const isOpen = ref(true)
-const createWinBox = useWinBox()
-
-function initialize() {
-  winboxRef.value?.initialize()
-}
-
-const visible = ref(false)
-import AppGrid from './AppGrid.vue'
-
 </script>
-
 
 <!--  -->
 <!--  -->
@@ -67,8 +74,6 @@ import AppGrid from './AppGrid.vue'
 * {
   margin: 0;
   padding: 0;
-  @font-face: 'MS Sans Serif';
-  src: url('../public/font/converted/ms_sans_serif.woff');
 }
 
 html,
@@ -76,23 +81,85 @@ body {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Open Sans", OpenSans, Roboto, Segoe UI, sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: chartreuse;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.decal {
+  position: absolute;
+  display: flex;
+  height: 300px;
+  justify-content: flex-end;
+}
+
 .desktop {
   display: flex;
-  margin-top: 1000px;
+  height: 100%;
 }
-.link-icon {
+
+.cart-img,
+.archive-ico {
+  width: 45px;
+}
+
+.links-section {
   display: flex;
   flex-direction: column;
-  height: 60px;
-  border: solid 1px black;
-  margin-left: 50px;
-  margin-top: 12px;
-  width: 75px;
+  width: 25%;
+  justify-content: space-between;
+  padding: 1.6em;
+}
+
+.img-section {
+  display: flex;
+  width: 50%;
+  height: fit-content;
   align-items: center;
-  justify-content: space-evenly;
+  height: 100%;
+}
+
+.link-icon {
+  height: 75px;
+  width: 80px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 
 }
+
+.links-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
 .container {
+  display: block;
   height: 100vh;
+  background-color: black;
+}
+
+.img__interface {
+  position: relative;
 }
 </style>
