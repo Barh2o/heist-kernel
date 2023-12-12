@@ -9,8 +9,6 @@ import Splash from './Splash.vue';
 <!--  -->
 <!--  -->
 <!--  -->
-
-
 <style>
 * {
   margin: 0;
@@ -38,6 +36,4 @@ a {
   font-family: 'MS Sans Serif', monospace;
   src: url('/font/converted/ms_sans_serif.woff');
 }
-
-
 </style>
