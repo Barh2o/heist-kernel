@@ -1,5 +1,5 @@
 <template>
- <div class="container">
+  <div class="container">
     <div class="desktop">
       <div class="links-section">
         <div class="links-top">
@@ -30,17 +30,17 @@
           <p></p>
         </div>
       </div>
+      <!--  -->
+      <!--  -->
+
+      <div class="img-section">
+
+
         <!--  -->
+        <img class="splash" :src="imgUrl" />
         <!--  -->
-        
-        <div class="img-section">
-          
-          
-          <!--  -->
-          <img class="splash" :src="imgUrl"/>
-          <!--  -->
-        </div>
-        <div class="links-section">
+      </div>
+      <div class="links-section">
         <div class="links-bottom">
           <div class="link-icon">
             <a target="_blank" href="https://www.twitter.com/heistht">
@@ -60,8 +60,8 @@
               <p>Shop</p>
             </a>
           </div>
+        </div>
       </div>
-      </div> 
 
     </div>
 
@@ -147,8 +147,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 70%;
 }
+
 .splash {
   position: absolute;
 }
