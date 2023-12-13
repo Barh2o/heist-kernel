@@ -6,7 +6,7 @@
         <div class="links-top">
 
           <div class="link-icon">
-            <a href="#" @click="changeImage('../assets/img/heist.png')">
+            <a href="https://www.heist.ht">
               <img class="desktop_icon" src="/assets/icon/icon_home.png" alt="">
               <p>Home</p>
             </a>
@@ -30,7 +30,12 @@
               <p>Archive</p>
             </a>
           </div>
-          <p></p>
+          <div class="link-icon">
+            <a href="#" @click="changeImage('../assets/img/window_about.png')">
+              <img class="desktop_icon" src="../assets/icon/icon_about.png" alt="">
+              <p>About</p>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -91,7 +96,7 @@ export default {
 .container {
   display: block;
   height: 100vh;
-  background-color: rgb(32, 33, 36);
+  background-color: #000;
 }
 
 .desktop {
@@ -110,15 +115,14 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.2em;
-  z-index:10px;
 }
 
 .img-section {
   display: flex;
-  width: 50%;
+  width: 70%;
   height: fit-content;
   align-items: center;
-  height: 100%;
+  height: 60%;
 }
 
 .links-top {
@@ -129,7 +133,8 @@ export default {
 .links-bottom {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  justify-content:flex-start;
+  
 }
 
 .link-icon {
@@ -145,13 +150,13 @@ export default {
 }
 
 .splash {
-  position: absolute;
+  position: relative;
 }
 
 .img-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 65%;
+  width: 70%;
 }
 </style>

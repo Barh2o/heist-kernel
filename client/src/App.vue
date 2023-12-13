@@ -19,7 +19,7 @@ html,
 body {
   height: 100vh;
   font-family: 'MS Sans Serif';
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 a {
