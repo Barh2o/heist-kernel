@@ -17,13 +17,13 @@
           </div>
           <div class="link-icon">
             <a a href="#" @click="changeImage('../assets/img/members-splash.png')">
-              <img class="desktop_icon" style="width: 40px;" src="/assets/icon/utilities-terminal.png" alt="">
+              <img class="desktop_icon" src="/assets/icon/utilities-terminal.png" alt="">
               <p>Organization</p>
             </a>
           </div>
           <div class="link-icon">
             <a href="_blank">
-              <img class="desktop_icon archive-ico" src="/assets/icon/briefcase.png" alt="">
+              <img class="desktop_icon" src="/assets/icon/briefcase.png" alt="">
               <p>Archive</p>
             </a>
           </div>
@@ -43,6 +43,12 @@
       <div class="links-section">
         <div class="links-bottom">
           <div class="link-icon">
+            <a target="_blank" href="https://discord.gg/yjZSXWcXte">
+              <img class="desktop_icon" src="/assets/icon/discord.png" alt="">
+              <p>Discord</p>
+            </a>
+          </div>
+          <div class="link-icon">
             <a target="_blank" href="https://www.twitter.com/heistht">
               <img class="desktop_icon" src="/assets/icon/twitter.png" alt="">
               <p>Twitter</p>
@@ -56,7 +62,7 @@
           </div>
           <div class="link-icon">
             <a target="_blank" href="https://www.heist.net/">
-              <img class="desktop_icon cart-img" src="/assets/icon/shop.png" alt="">
+              <img class="desktop_icon" src="/assets/icon/shop.png" alt="">
               <p>Shop</p>
             </a>
           </div>
@@ -101,10 +107,6 @@ export default {
   margin-bottom: 10px;
 }
 
-.cart-img,
-.archive-ico {
-  width: 45px;
-}
 
 .links-section {
   display: flex;
@@ -141,16 +143,17 @@ export default {
   justify-content: center;
   align-items: center;
   user-select: none;
+  letter-spacing: 0px;
+}
+
+.splash {
+  position: absolute;
 }
 
 .img-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70%;
-}
-
-.splash {
-  position: absolute;
+  width: 85%;
 }
 </style>
