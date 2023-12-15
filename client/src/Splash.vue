@@ -120,7 +120,7 @@ export default {
 
 .img-section {
   display: flex;
-  width: 70%;
+  width: 90%;
   height: fit-content;
   align-items: center;
   height: 60%;
