@@ -46,7 +46,7 @@
       <div class="links-section">
         <div class="links-bottom">
           <div class="link-icon">
-            <a target="_blank" href="https://discord.gg/yjZSXWcXte">
+            <a target="_blank" href="https://discord.gg/JR2mcktyCd">
               <img class="desktop_icon" src="/assets/icon/icon_discord.png" alt="">
               <p>Discord</p>
             </a>
