@@ -27,7 +27,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "compile": "tsup",
     "dev": "tsup --watch --onSuccess \"pnpm --filter client dev\"",
     "lint": "eslint .",
     "prepublishOnly": "pnpm build",
