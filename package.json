@@ -5,7 +5,7 @@
   "description": "",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/vue-winbox#readme",
+  "homepage": ".",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wobsoriano/vue-winbox.git"
