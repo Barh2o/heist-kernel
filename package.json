@@ -30,7 +30,7 @@
     "compile": "tsup",
     "dev": "tsup --watch --onSuccess \"pnpm --filter client dev\"",
     "lint": "eslint .",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm craft",
     "release": "bumpp && npm publish",
     "typecheck": "tsc --noEmit"
   },
