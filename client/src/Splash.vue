@@ -103,6 +103,7 @@ export default {
   display: flex;
   height: 100%;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .desktop_icon {
@@ -134,7 +135,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content:flex-start;
-  
+  align-items: end;
 }
 
 .link-icon {
@@ -150,7 +151,7 @@ export default {
 }
 
 .splash {
-  position: relative;
+  position: absolute;
 }
 
 .img-section {
@@ -158,5 +159,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   width: 70%;
+  height:
 }
 </style>
