@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "compile": "vue-tsc && vite compile",
     "preview": "vite preview"
   },
   "dependencies": {
